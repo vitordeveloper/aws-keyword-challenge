@@ -1,4 +1,4 @@
-# aws-keyword-challenge
+# Amazon Keyword Tech challenger
 Project created for Sellics tech challenge, to calculate score for keywords amazon.
 
 # StartUP Application: 
