@@ -1,0 +1,58 @@
+swagger: '2.0'
+info:
+  description: Api para Score de Keywords Amazon
+  version: '1.0'
+  title: Aws-Keyword-Challenger
+  # put the contact info for your development or API team
+  contact:
+    email: vitor.rodrigues.alvarenga@gmail.com
+
+  license:
+    name: Apache 2.0
+    url: http://www.apache.org/licenses/LICENSE-2.0.html
+
+paths:
+  /estimate:
+    get:
+      summary: Estimate score by keyword
+      operationId: estimate
+      description: |
+        By passing in the appropriate options, you can search for
+        available inventory in the system
+      produces:
+        - application/json
+      parameters:
+        - in: query
+          name: keyword
+          description: keyword to calculate score
+          required: true
+          type: string
+
+      responses:
+        200:
+          description: search results matching criteria
+          schema:
+            type: object
+            items:
+              $ref: '#/definitions/responseItem'
+        400:
+          description: bad input parameter
+
+definitions:
+  responseItem:
+    type: object
+    required:
+      - Keyword
+      - score
+    properties:
+      Keyword:
+        type: string
+        example: iphone
+      score:
+        type: integer
+        example: 80
+# Added by API Auto Mocking Plugin
+host: virtserver.swaggerhub.com
+basePath: /vitoralvarenga/aws-keyword-challenge/1.0.0
+schemes:
+  - https
