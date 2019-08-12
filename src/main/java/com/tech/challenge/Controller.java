@@ -18,6 +18,7 @@ public class Controller {
     @ResponseBody
     public KeywordResponse getMapping(@RequestParam("keyword") String keyword) throws URISyntaxException {
 
+
         Integer score = awsManager.requestAWS(keyword);
 
         return new KeywordResponse(keyword, score);

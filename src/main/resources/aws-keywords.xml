@@ -7,7 +7,11 @@
        http://www.springframework.org/schema/beans/spring-beans.xsd">
 
     <bean class="com.tech.challenge.aws.keyword.AwsManager"/>
-    <bean id="clientHttpRequestFactory" class="org.springframework.http.client.HttpComponentsClientHttpRequestFactory"/>
+
+    <bean id="clientHttpRequestFactory" class="org.springframework.http.client.HttpComponentsClientHttpRequestFactory">
+        <property name="connectTimeout" value="10000"/>
+        <property name="readTimeout" value="10000"/>
+    </bean>
 
     <bean id="jaroWinklerSimilarity" class="org.apache.commons.text.similarity.JaroWinklerSimilarity"/>
 
