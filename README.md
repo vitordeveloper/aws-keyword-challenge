@@ -1,12 +1,14 @@
 # aws-keyword-challenge
-Project created for Sellics tech challenge.
+Project created for Sellics tech challenge, to calculate score for keywords amazon.
 
-# Maven project: 
-- Root folder:
-    
+# StartUP Application: 
+1. Into Root Folder：
+   ```
     mvn clean install
-    
-    java -jar target/tech-challenger-*.jar
-
- 
+    ```
+2. Run Application
+   ```
+   java -jar target/tech-challenger-${version}.jar
+   ```
+   
 
